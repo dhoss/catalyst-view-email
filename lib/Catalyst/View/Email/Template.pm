@@ -5,7 +5,7 @@ use Carp;
 use Scalar::Util qw/ blessed /;
 extends 'Catalyst::View::Email';
 
-our $VERSION = '0.31';
+our $VERSION = '0.32';
 $VERSION = eval $VERSION;
 =head1 NAME
 
@@ -54,7 +54,6 @@ the template instead of the body and forwarding to your Email::Template view:
         $c->stash->{email} = {
             to          => 'jshirley@gmail.com',
             cc          => 'abraxxa@cpan.org',
-            bcc         => 'hidden@secret.com hidden2@foobar.com',
             from        => 'no-reply@foobar.com',
             subject     => 'I am a Catalyst generated email',
             template    => 'test.tt',

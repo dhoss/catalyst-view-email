@@ -8,7 +8,7 @@ use Email::Sender::Simple qw/ sendmail /;
 use Email::MIME::Creator;
 extends 'Catalyst::View';
 
-our $VERSION = '0.31';
+our $VERSION = '0.32';
 $VERSION = eval $VERSION;
 
 has 'mailer' => (
@@ -124,7 +124,6 @@ Sending email is just filling the stash and forwarding to the view:
         $c->stash->{email} = {
             to      => 'jshirley@gmail.com',
             cc      => 'abraxxa@cpan.org',
-            bcc     => join ',', qw/hidden@secret.com hidden2@foobar.com/,
             from    => 'no-reply@foobar.com',
             subject => 'I am a Catalyst generated email',
             body    => 'Body Body Body',
@@ -245,8 +244,6 @@ sub process {
       if $email->{to};
     push @$header, ( 'Cc' => delete $email->{cc} )
       if $email->{cc};
-    push @$header, ( 'Bcc' => delete $email->{bcc} )
-      if $email->{bcc};
     push @$header, ( 'From' => delete $email->{from} )
       if $email->{from};
     push @$header,
