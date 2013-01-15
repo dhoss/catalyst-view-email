@@ -291,9 +291,12 @@ around 'process' => sub {
 
     # single part api
     elsif ( $c->stash->{$stash_key}->{template} ) {
+        my $part_args = { template => $c->stash->{$stash_key}->{template} };
+        if (my $ctype = $c->stash->{$stash_key}->{content_type}) {
+            $part_args->{content_type} = $ctype;
+        }
         push @parts,
-          $self->generate_part( $c,
-            { template => $c->stash->{$stash_key}->{template}, } );
+          $self->generate_part( $c, $part_args );
     }
 
     delete $c->stash->{$stash_key}->{body};
