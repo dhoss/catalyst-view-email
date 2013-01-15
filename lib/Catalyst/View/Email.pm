@@ -99,8 +99,8 @@ In your app configuration:
                 # mailer_args is passed directly into Email::Sender::Simple 
                 mailer_args => {
                     host     => 'smtp.example.com', # defaults to localhost
-                    username => 'username',
-                    password => 'password',
+                    sasl_username => 'sasl_username',
+                    sasl_password => 'sasl_password',
             }
           }
         }
