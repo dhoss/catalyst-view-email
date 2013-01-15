@@ -1,0 +1,104 @@
+Revision history for Perl extension Catalyst::View::Email.
+
+0.31    2011-01-17
+        - Added handling and test for encoding and quoting parts RT #56391 
+
+0.30    2010-05-22
+        - Added Test::Requires to 06config.t
+
+0.29    2010-05-21
+        - Using Test::Requires for Mason and Template::Toolkit dependency check
+        - Removed Template::Toolkit and Mason as prereqs
+
+0.28    2010-05-14
+        - Added  version numbers to Helpers
+
+0.27    2010-03-23
+        - made ::View::TT and ::View::Mason hard deps
+        - adjusted tests to reflect the aforementioned
+        - patches welcome
+
+0.25_02 2010-02-21
+        - cleaned up tests
+        - made Test::More 0.88 a prereq
+
+0.25_01 2010-02-21
+        - updated/corrected docs
+        - added proper svn repo url
+
+0.25    2010-02-01
+        - converted to Module::Install
+
+0.23    2010-01-30
+        - removed Email::Send::Test from t/lib/* views
+
+0.22    2010-01-28
+        - small fixes, version bumpage etc
+
+0.21_01 2010-01-27
+        - dev release to test recent fixes
+
+0.21    2010-01-27
+        - provided a sane MANIFEST.SKIP for dzil
+
+0.20    2010-01-26
+        - fix transport instantiation thanks to Chris Nehren <apeiron@cpan.org>
+
+0.19    2010-01-18
+        - fixed optional dependencies
+		- added META stuff back in
+
+0.18    2010-01-17
+        - Fixed version dependencies for failing regressions
+		- added Email::Send::Test as a dependency
+
+0.17    2010-01-14
+        - fixed MANIFEST
+
+0.16    2010-01-12
+        - Fixed a Makefile.PL issue
+
+0.15    2010-01-12
+        - Fixed teeny version issue with Email::Sender::Simple
+
+0.14    2010-01-09
+        - Ported over to using Email::Sender::Simple, and Moose
+		- Fixed Mason test so that it doesn't choke, as around 'process' seems to make
+		  it die.
+
+0.13    2009-02-22 14:06:00
+        - bcc: POD corrections thanks to Lance Brown <lance@bearcircle.net>
+
+0.12    2009-01-22 06:52:00
+        - Fixing tests for new versions of MIME::Creator
+        - Better structure of the code so that ::Template can also handle
+          plain text views
+        - Added onto troubleshooting
+
+0.11    2008-07-04 09:14:00
+        - Fixing a bug where content-type was ignored so multipart/alternative
+          failed.  RT #32215
+
+0.10    2007-11-22 23:00:00
+        - Refactored by Alexander Hartmaier with api changes
+          and POD improvements
+
+0.06
+        - Fixing some slight issues with configuration not being handled
+          appropriately (thanks dwc and mst)
+0.05
+        - Better support for configuration
+        - Adding Mason tests
+
+0.04
+        - Fixing MANIFEST, distribution
+
+0.03
+        - Improved handling of configuration, thanks to mst.
+
+0.02
+        - Allow configuration from application or ConfigLoader
+        - Minor POD updates
+
+0.01  2007-06-03
+        - Initial release
