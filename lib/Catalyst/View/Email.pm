@@ -15,7 +15,7 @@ has 'mailer' => (
     is      => 'rw',
     isa     => 'Str',
     lazy    => 1,
-    default => sub { "sendmail" }
+    default => "sendmail"
 );
 
 has '_mailer_obj' => (
@@ -29,7 +29,7 @@ has 'stash_key' => (
     is      => 'rw',
     isa     => 'Str',
     lazy    => 1,
-    default => sub { "email" }
+    default => "email" 
 );
 
 has 'default' => (
