@@ -3,6 +3,8 @@ Revision history for Perl extension Catalyst::View::Email.
 0.32    2013-01-15
         - Removed Bcc references per https://rt.cpan.org/Public/Bug/Display.html?id=75775
         - Fixed documentation bug, changed 'Host' to 'host' per https://rt.cpan.org/Ticket/Display.html?id=58748
+        - Added patch (with additional tests) to enable proper content_type setting for email templates
+          per https://rt.cpan.org/Ticket/Display.html?id=66495&results=73b48805c7d356914e91ea95e31ddef6
 
 0.31    2011-01-17
         - Added handling and test for encoding and quoting parts RT #56391 
