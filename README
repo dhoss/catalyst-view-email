@@ -62,7 +62,6 @@ SENDING EMAIL
             $c->stash->{email} = {
                 to      => 'jshirley@gmail.com',
                 cc      => 'abraxxa@cpan.org',
-                bcc     => join ',', qw/hidden@secret.com hidden2@foobar.com/,
                 from    => 'no-reply@foobar.com',
                 subject => 'I am a Catalyst generated email',
                 body    => 'Body Body Body',
@@ -81,7 +80,6 @@ SENDING EMAIL
             header => [
                 To      => 'jshirley@gmail.com',
                 Cc      => 'abraxxa@cpan.org',
-                Bcc     => join ',', qw/hidden@secret.com hidden2@foobar.com/,
                 From    => 'no-reply@foobar.com',
                 Subject => 'Note the capitalization differences',
             ],

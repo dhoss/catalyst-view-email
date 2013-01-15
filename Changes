@@ -1,5 +1,8 @@
 Revision history for Perl extension Catalyst::View::Email.
 
+0.32    2013-01-15
+        - Removed Bcc references per https://rt.cpan.org/Public/Bug/Display.html?id=75775
+
 0.31    2011-01-17
         - Added handling and test for encoding and quoting parts RT #56391 
 
