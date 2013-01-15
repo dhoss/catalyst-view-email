@@ -13,6 +13,7 @@ use lib "$FindBin::Bin/lib";
 use_ok('Catalyst::Test', 'TestApp');
 
 my $response;
+my $response2;
 my $time = time;
 ok( ( $response = request("/template_email?time=$time"))->is_success,
     'request ok' );
@@ -32,4 +33,12 @@ like($parts[0]->body, qr/test-email\@example.com on $time/, 'got content back');
 is($parts[1]->content_type, 'text/html', 'text/html ok');
 like($parts[1]->body, qr{<em>test-email\@example.com</em> on $time}, 'got content back');
 #like($emails[0]->body, qr/$time/, 'Got our email');
+
+ok( ( $response2 = request("/template_email_single?time=$time"))->is_success,
+    'request ok' );
+like( $response2->content, qr/Template Email Ok/, 'controller says ok' );
+my @emails2 = Email::Sender::Simple->default_transport->deliveries;
+my @parts2 = $emails2[0]->{'email'}[0]->parts;
+is($parts2[1]->content_type, 'text/html', 'text/html ok');
+like($parts2[1]->body, qr{<em>test-email\@example.com</em> on $time}, 'got content back');
 done_testing();
