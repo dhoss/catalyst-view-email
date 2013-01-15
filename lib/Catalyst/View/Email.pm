@@ -161,6 +161,19 @@ contained ones.
         ],
     };
 
+You can set the envelope sender and recipient as well:
+
+  $c->stash->{email} = {
+
+    envelope_from => 'envelope-from@example.com',
+    from          => 'header-from@example.com',
+
+    envelope_to   => [ 'foo@example.com', 'bar@example.com' ],
+    to            => 'Undisclosed Recipients:;',
+
+    ...
+  };
+
 =head1 HANDLING ERRORS
 
 If the email fails to send, the view will die (throw an exception).
@@ -283,7 +296,12 @@ sub process {
     my $message = $self->generate_message( $c, \%mime );
 
     if ($message) {
-        my $return = sendmail( $message, { transport => $self->_mailer_obj } );
+        my $return = sendmail( $message,
+          {
+            exists $email->{envelope_from} ? ( from => $email->{envelope_from} ) : (),
+            exists $email->{envelope_to}   ? ( to   => $email->{envelope_to}   ) : (),
+            transport => $self->_mailer_obj,
+          } );
 
         # return is a Return::Value object, so this will stringify as the error
         # in the case of a failure.
