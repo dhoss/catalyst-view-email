@@ -2,6 +2,9 @@ Revision history for Perl extension Catalyst::View::Email.
 
 0.33    2013-02-13
         - applied patch to fix Moo->Moose inflation that Email::Sender does per https://rt.cpan.org/Ticket/Display.html?id=83241
+        - removed inc/ so running perl Makefile.PL would do so in author mode
+        - removed META.yml, MANIFEST, and various other files that shouldn't be in git
+        - updated Makefile.PL to use version_from "lib/Catalyst/View/Email.pm" per https://rt.cpan.org/Ticket/Display.html?id=83195&results=0eb39711cb23f5f318a3738cf7d089df
 
 0.32    2013-01-15
         - Removed Bcc references per https://rt.cpan.org/Public/Bug/Display.html?id=75775
