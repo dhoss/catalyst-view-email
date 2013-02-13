@@ -8,3 +8,5 @@ inc
 *.patch
 META*
 README
+MANIFEST
+*gz
