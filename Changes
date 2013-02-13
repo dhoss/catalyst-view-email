@@ -1,5 +1,8 @@
 Revision history for Perl extension Catalyst::View::Email.
 
+0.33    2013-02-13
+        - applied patch to fix Moo->Moose inflation that Email::Sender does per https://rt.cpan.org/Ticket/Display.html?id=83241
+
 0.32    2013-01-15
         - Removed Bcc references per https://rt.cpan.org/Public/Bug/Display.html?id=75775
         - Fixed documentation bug, changed 'Host' to 'host' per https://rt.cpan.org/Ticket/Display.html?id=58748
