@@ -5,7 +5,7 @@ name 'Catalyst-View-Email';
 all_from 'lib/Catalyst/View/Email.pm';
 author 'J. Shirley <jshirley@gmail.com>';
 license 'perl';
-
+version_from 'lib/Catalyst/View/Email.pm';
 test_requires 'Test::More';
 
 requires 'MIME::Base64'          => '3.08';
