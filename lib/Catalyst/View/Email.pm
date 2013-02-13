@@ -20,7 +20,7 @@ has 'mailer' => (
 
 has '_mailer_obj' => (
     is      => 'rw',
-    isa     => 'Email::Sender::Transport',
+    does    => 'Email::Sender::Transport',
     lazy    => 1,
     builder => '_build_mailer_obj',
 );
