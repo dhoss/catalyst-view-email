@@ -1,5 +1,9 @@
 Revision history for Perl extension Catalyst::View::Email.
 
+0.34
+        2013-03-15
+        - repackaged with Mac OS X's "gnutar" as the normal tar produces unwanted noise when untarring, reported by https://rt.cpan.org/Public/Bug/Display.html?id=83970 
+
 0.33    2013-02-13
         - applied patch to fix Moo->Moose inflation that Email::Sender does per https://rt.cpan.org/Ticket/Display.html?id=83241
         - removed inc/ so running perl Makefile.PL would do so in author mode
