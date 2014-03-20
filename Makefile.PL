@@ -17,6 +17,7 @@ requires 'Email::Sender::Simple' => '0.100110';
 requires 'Email::MIME'           => '1.859';
 requires 'Email::MIME::Creator'  => '1.455';
 requires 'Test::More'            => '0.88';
+requires 'Module::Runtime'       => '0.014';
 #requires 'Catalyst::View::TT'    => '0.31';
 #requires 'Catalyst::View::Mason' => '0.18';
 
