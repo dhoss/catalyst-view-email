@@ -6,6 +6,7 @@ use Carp;
 use Encode qw(encode decode);
 use Email::Sender::Simple qw/ sendmail /;
 use Email::MIME::Creator;
+use Module::Runtime;
 extends 'Catalyst::View';
 
 our $VERSION = '0.33';
@@ -223,7 +224,7 @@ sub _build_mailer_obj {
         $transport_class = "Email::Sender::Transport::$transport_class";
     }
 
-    Class::MOP::load_class($transport_class);
+    Module::Runtime::require_module($transport_class);
 
     return $transport_class->new( $self->sender->{mailer_args} || {} );
 }
