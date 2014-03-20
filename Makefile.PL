@@ -31,7 +31,7 @@ realclean_files 'README';
 resources 'IRC'     => 'irc://irc.perl.org/#catalyst';
 resources 'license' => 'http://dev.perl.org/licenses/';
 resources 'repository' =>
-  'http://dev.catalyst.perl.org/repos/Catalyst/Catalyst-View-Email/';
+  'http://github.com/dhoss/catalyst-view-email';
 resources 'MailingList' =>
   'http://lists.scsys.co.uk/cgi-bin/mailman/listinfo/catalyst';
 
