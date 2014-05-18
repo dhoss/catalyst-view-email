@@ -391,7 +391,7 @@ message object.
 sub generate_message {
     my ( $self, $c, $attr ) = @_;
 
-    # setup the attributes (merge with defaultis)
+    # setup the attributes (merge with defaults)
     $attr->{attributes} = $self->setup_attributes( $c, $attr->{attributes} );
     Email::MIME->create( %$attr );
 }
