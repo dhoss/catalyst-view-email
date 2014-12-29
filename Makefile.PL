@@ -34,6 +34,8 @@ resources 'repository' =>
   'http://github.com/dhoss/catalyst-view-email';
 resources 'MailingList' =>
   'http://lists.scsys.co.uk/cgi-bin/mailman/listinfo/catalyst';
+resources 'bugtracker' => 
+  'https://github.com/dhoss/catalyst-view-email/issues';
 
 auto_provides;
 auto_install;
