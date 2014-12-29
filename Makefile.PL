@@ -32,7 +32,7 @@ resources 'IRC'     => 'irc://irc.perl.org/#catalyst';
 resources 'license' => 'http://dev.perl.org/licenses/';
 resources 'repository' =>
   'http://github.com/dhoss/catalyst-view-email';
-resources 'MailingList' =>
+resources 'Mailing_list' =>
   'http://lists.scsys.co.uk/cgi-bin/mailman/listinfo/catalyst';
 resources 'bugtracker' => 
   'https://github.com/dhoss/catalyst-view-email/issues';
