@@ -1,6 +1,6 @@
 package Catalyst::Helper::View::Email;
 
-our $VERSION = '0.34';
+our $VERSION = '0.36';
 $VERSION = eval $VERSION;
 
 use strict;
