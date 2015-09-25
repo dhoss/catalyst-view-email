@@ -9,7 +9,7 @@ use Email::MIME::Creator;
 use Module::Runtime;
 extends 'Catalyst::View';
 
-our $VERSION = '0.35';
+our $VERSION = '0.36';
 $VERSION = eval $VERSION;
 
 has 'mailer' => (
