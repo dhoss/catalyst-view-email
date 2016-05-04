@@ -65,21 +65,24 @@ the template instead of the body and forwarding to your Email::Template view:
 
 Alternatively if you want more control over your templates you can use the following idiom
 to override the defaults. If charset and encoding given, the body become properly encoded.
+According to the specification at http://tools.ietf.org/html/rfc2046#section-5.1.4
+multipart/alternative emails should list versions plainest to richest, typically text/plain
+then text/html
 
     templates => [
-        {
-            template        => 'email/test.html.tt',
-            content_type    => 'text/html',
-            charset         => 'utf-8',
-            encoding        => 'quoted-printable',
-            view            => 'TT', 
-        },
         {
             template        => 'email/test.plain.mason',
             content_type    => 'text/plain',
             charset         => 'utf-8',
             encoding        => 'quoted-printable',
-            view            => 'Mason', 
+            view            => 'Mason',
+        },
+        {
+            template        => 'email/test.html.tt',
+            content_type    => 'text/html',
+            charset         => 'utf-8',
+            encoding        => 'quoted-printable',
+            view            => 'TT',
         }
     ]
 
