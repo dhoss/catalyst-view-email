@@ -268,8 +268,9 @@ sub process {
 
     my $parts = $email->{parts};
     my $body  = $email->{body};
+    my $body_str = $email->{body_str};
 
-    unless ( $parts or $body ) {
+    unless ( $parts or $body or $body_str ) {
         croak "Can't send email without parts or body, check stash";
     }
 
@@ -278,8 +279,11 @@ sub process {
     if ( $parts and ref $parts eq 'ARRAY' ) {
         $mime{parts} = $parts;
     }
-    else {
+    elsif ( defined $body ) {
         $mime{body} = $body;
+    }
+    else {
+        $mime{body_str} = $body_str;
     }
 
     $mime{attributes}->{content_type} = $email->{content_type}
