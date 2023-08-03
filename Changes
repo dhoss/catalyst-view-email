@@ -1,5 +1,8 @@
 Revision history for Perl extension Catalyst::View::Email.
 
+0.36    xxx
+        - call `use_ok` once per module https://github.com/dhoss/catalyst-view-email/commit/432d95d0d52359cd4c7b6b862758c6801ca664dc
+
 0.34    2014-05-17
         - switched from Class::MOP::load_class to Module::Runtime::require_module per
           cf. https://rt.cpan.org/Public/Bug/Display.html?id=91013
