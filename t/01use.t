@@ -1,3 +1,4 @@
-use Test::More tests => 1;
+use Test::More tests => 2;
 
-use_ok 'Catalyst::View::Email', 'Catalyst::View::Email::Template';
+use_ok 'Catalyst::View::Email';
+use_ok 'Catalyst::View::Email::Template';
